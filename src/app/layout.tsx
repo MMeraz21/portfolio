@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable}`}>
       <body className="bg-[#fbfbf3]"> {/* Set the background color here */}
         <TRPCReactProvider>
-          <SiteNav />
+          {/* <SiteNav /> */}
           {children}
         </TRPCReactProvider>
       </body>

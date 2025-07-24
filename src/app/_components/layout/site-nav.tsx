@@ -54,37 +54,35 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function SiteNav() {
   return (
-    <div className="flex justify-center p-4">
-      <NavigationMenu viewport={false} className="bg-[#fbfbf3]">
-        <NavigationMenuList className="space-x-2">
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-[#fbfbf3] border border-black`}>
-              <Link href="/">Home</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-[#fbfbf3] border border-black`}>
-              <Link href="/components">Experience</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-[#fbfbf3] border border-black`}>
-              <Link href="/docs">Projects</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-[#fbfbf3] border border-black`}>
-              <Link href="/list">Education</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-[#fbfbf3] border border-black`}>
-              <Link href="/simple">More</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+    <NavigationMenu viewport={false} className="flex justify-center w-full">
+      <NavigationMenuList className="space-x-2 p-4">
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+            <Link href="/">Home</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+            <Link href="/components">Experience</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+            <Link href="/docs">Projects</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+            <Link href="/list">Education</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+            <Link href="/simple">More</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   )
 }
 
