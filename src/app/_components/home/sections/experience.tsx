@@ -11,9 +11,9 @@ export function Experience() {
     ]
 
     return (
-        <section className="min-h-screen bg-[#161616] text-[#fbfbf3] flex items-center">
+        <section className="min-h-screen bg-[#161616] text-[#fbfbf3] flex">
             {/* Left side content */}
-            <article className="w-[40%] pl-8 space-y-6">
+            <article className="w-[40%] pl-8 space-y-6 my-auto">
                 <header className="space-y-2">
                     <h2 className="text-2xl font-bold">jobboardai</h2>
                     <h3 className="text-md">Software Engineer Intern</h3>
@@ -38,7 +38,7 @@ export function Experience() {
             </article>
             
             {/* Right side - image slider */}
-            <div className="w-[60%] h-screen flex items-center">
+            <div className="w-[60%] flex items-center justify-center">
                 <ImageSlider images={projectImages} />
             </div>
         </section>

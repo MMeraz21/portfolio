@@ -1,7 +1,6 @@
 "use client"
 
 import Image from 'next/image'
-import { Card, CardContent } from "~/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -12,28 +11,27 @@ import {
 
 export function ImageSlider({ images }: { images: string[] }) {
   return (
-    <Carousel className="w-full max-w-4xl">
-      <CarouselContent>
-        {images.map((image, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <Image 
-                    src={image} 
-                    alt={`Image ${index + 1}`} 
-                    width={1000} 
-                    height={1000}
-                    className="object-contain"
-                  />
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="relative w-full max-w-4xl mx-auto">
+      <Carousel>
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="flex aspect-video items-center justify-center p-2">
+                <Image 
+                  src={image} 
+                  alt={`Image ${index + 1}`} 
+                  width={1000} 
+                  height={1000}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
+      </Carousel>
+    </div>
   )
 }
