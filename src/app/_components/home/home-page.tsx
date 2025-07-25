@@ -10,10 +10,6 @@ export function HomePage() {
             <div className="ml-8 mt-8">
                 <h1>Hi! I&apos;m Manuel Meraz</h1>
                 <p>Software Engineer</p>
-                <p>I'm a recent CS grad from DePaul University, currently interning and building my .</p>
-                <p>I'm currently working at <a href="https://www.google.com">Google</a> as a software engineer.</p>
-                <p>I'm currently living in <a href="https://www.google.com">San Francisco, CA</a>.</p>
-                <p>I'm currently learning <a href="https://www.google.com">React</a>.</p>
             </div>
         </div>
     )
