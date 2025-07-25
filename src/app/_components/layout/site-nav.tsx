@@ -58,7 +58,7 @@ export function SiteNav() {
       <NavigationMenuList className="space-x-1 p-4">
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
-            <Link href="/">Bio</Link>
+            <Link href="/">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
