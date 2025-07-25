@@ -55,29 +55,29 @@ const components: { title: string; href: string; description: string }[] = [
 export function SiteNav() {
   return (
     <NavigationMenu viewport={false} className="flex justify-center w-full">
-      <NavigationMenuList className="space-x-2 p-4">
+      <NavigationMenuList className="space-x-1 p-4">
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
-            <Link href="/">Home</Link>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
+            <Link href="/">Bio</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
             <Link href="/components">Experience</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
             <Link href="/docs">Projects</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
             <Link href="/list">Education</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border border-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} border-2 border-black`}>
             <Link href="/simple">More</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
