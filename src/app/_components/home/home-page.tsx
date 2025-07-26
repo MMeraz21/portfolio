@@ -6,7 +6,7 @@ export function HomePage() {
     return (
         <div className="flex flex-row items-start bg-[#fbfbf3] h-[calc(100vh-72px)]">
             {/* Left Column */}
-            <div className="flex-1 pt-16 pl-24">
+            <div className="flex-1 pt-16 pl-32">
                 <h1 className="text-7xl font-medium mb-4">Manuel Meraz</h1>
                 <p className="text-4xl mb-6">Full Stack Engineer</p>
                 <p className="text-xl text-gray-500 max-w-[600px]">
@@ -28,6 +28,10 @@ export function HomePage() {
             {/* Right Column */}
             <div className="flex-1 p-8">
                 {/* Right column content */}
+                <div className="text-xl text-gray-500 max-w-[600px]">
+                    Hey! I&apos;m Manuel, a recent CS grad from DePaul University who enjoys building cool stuff for the web and mobile. I like working across the stack, but I especially enjoy making things that feel fast, clean, and intuitive. Whether it&apos;s a weekend side project or something bigger, I love turning ideas into real apps.
+                    Outside of coding, you&apos;ll usually find me digging through online marketplaces for deals on clothes, playing basketball, gaming, or hanging out with my dog.
+                </div>
             </div>
         </div>
     )
