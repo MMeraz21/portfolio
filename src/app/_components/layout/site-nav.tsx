@@ -1,69 +1,55 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "~/components/ui/navigation-menu"
-
+import { useState } from "react"
 
 export function SiteNav() {
-  return (
-    <NavigationMenu viewport={false} className="w-full -ml-2">
-      <NavigationMenuList className="flex flex-col -space-y-6 items-start">
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className="text-lg hover:text-gray-600 transition-colors">
-            <Link href="/">About</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className="text-lg hover:text-gray-600 transition-colors">
-            <Link href="/components">Experience</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className="text-lg hover:text-gray-600 transition-colors">
-            <Link href="/docs">Projects</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className="text-lg hover:text-gray-600 transition-colors">
-            <Link href="/list">Education</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className="text-lg hover:text-gray-600 transition-colors">
-            <Link href="/simple">More</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-  )
-}
+  const [activeItem, setActiveItem] = useState("About")
 
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
   return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
+    <nav className="-ml-2">
+      <ul className="flex flex-col -space-y-2">
+        <li>
+          <span 
+            onClick={() => setActiveItem("About")}
+            className={`text-lg cursor-pointer transition-colors duration-200 ${activeItem === "About" ? 'text-black' : 'text-[#999999]'}`}
+          >
+            About
+          </span>
+        </li>
+        <li>
+          <span 
+            onClick={() => setActiveItem("Experience")}
+            className={`text-lg cursor-pointer transition-colors duration-200 ${activeItem === "Experience" ? 'text-black' : 'text-[#999999]'}`}
+          >
+            Experience
+          </span>
+        </li>
+        <li>
+          <span 
+            onClick={() => setActiveItem("Projects")}
+            className={`text-lg cursor-pointer transition-colors duration-200 ${activeItem === "Projects" ? 'text-black' : 'text-[#999999]'}`}
+          >
+            Projects
+          </span>
+        </li>
+        <li>
+          <span 
+            onClick={() => setActiveItem("Education")}
+            className={`text-lg cursor-pointer transition-colors duration-200 ${activeItem === "Education" ? 'text-black' : 'text-[#999999]'}`}
+          >
+            Education
+          </span>
+        </li>
+        <li>
+          <span 
+            onClick={() => setActiveItem("More")}
+            className={`text-lg cursor-pointer transition-colors duration-200 ${activeItem === "More" ? 'text-black' : 'text-[#999999]'}`}
+          >
+            More
+          </span>
+        </li>
+      </ul>
+    </nav>
   )
 }
