@@ -14,9 +14,9 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main className="flex min-h-screen flex-col items-center bg-[#fbfbf3] text-black">
-        <div className="sticky top-0 py-4 z-50">
+        {/* <div className="sticky top-0 py-4 z-50">
           <SiteNav />
-        </div>
+        </div> */}
         <div className="w-full max-w-[100%]"> 
           <HomePage />
         </div>    
