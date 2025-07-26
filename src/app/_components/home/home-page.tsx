@@ -1,15 +1,33 @@
 "use client"
 
+import { Github, Linkedin, Instagram } from "lucide-react"
+
 export function HomePage() {
     return (
-        <div className="flex flex-row items-start pl-8 pt-8 bg-[#fbfbf3] h-[calc(100vh-72px)]"> {/* Changed min-h-screen to h-[calc(100vh-72px)] */}
-            <div className="w-[450px] h-[700px] bg-gray-200 border-4 border-black rounded-lg flex items-center justify-center">
-                {/* This is a placeholder div that looks like an image. Replace with actual Image component when ready */}
-                <span className="text-gray-600">300x300 Image</span>
+        <div className="flex flex-row items-start bg-[#fbfbf3] h-[calc(100vh-72px)]">
+            {/* Left Column */}
+            <div className="flex-1 pt-16 pl-24">
+                <h1 className="text-7xl font-medium mb-4">Manuel Meraz</h1>
+                <p className="text-4xl mb-6">Full Stack Engineer</p>
+                <p className="text-xl text-gray-500 max-w-[600px]">
+                    I build accessible, pixel-perfect digital experiences for the web.
+                </p>
+                <div className="absolute bottom-38 flex gap-6">
+                    <a href="https://github.com/MMeraz21" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+                        <Github size={24} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/manuel-meraz-386a27204/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+                        <Linkedin size={24} />
+                    </a>
+                    <a href="https://www.instagram.com/mmerazzzz21/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+                        <Instagram size={24} />
+                    </a>
+                </div>
             </div>
-            <div className="ml-8 mt-8">
-                <h1>Hi! I&apos;m Manuel Meraz</h1>
-                <p>Software Engineer</p>
+            
+            {/* Right Column */}
+            <div className="flex-1 p-8">
+                {/* Right column content */}
             </div>
         </div>
     )
