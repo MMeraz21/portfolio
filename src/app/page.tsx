@@ -17,9 +17,9 @@ export default async function Home() {
         <div className="w-full max-w-[100%]"> 
           <HomePage />
         </div>    
-        <div className="w-full max-w-[100%]"> 
+        {/* <div className="w-full max-w-[100%]"> 
           <Experience />
-        </div>
+        </div> */}
       </main>
     </HydrateClient>
   );

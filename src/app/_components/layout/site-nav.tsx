@@ -7,7 +7,7 @@ export function SiteNav() {
   const [activeItem, setActiveItem] = useState("About")
 
   return (
-    <nav className="-ml-2">
+    <nav>
       <ul className="flex flex-col -space-y-2">
         <li>
           <span 
