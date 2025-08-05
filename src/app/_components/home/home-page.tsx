@@ -87,6 +87,20 @@ export function HomePage() {
             githubUrl="https://github.com/MMeraz21/Echo"
             year="2025"
           />
+          <ProjectCard
+            title="Spear"
+            description={`A TikTok-inspired mobile app for sharing and discovering poetry. Features Google Sign In authentication 
+                and a feed-based interface for browsing poems.`}
+            technologies={[
+              "React Native",
+              "TypeScript",
+              "Expo",
+              "Spring Boot",
+              "Java",
+            ]}
+            githubUrl="https://github.com/MMeraz21/Spear"
+            year="2024"
+          />
         </div>
       </div>
     </div>
