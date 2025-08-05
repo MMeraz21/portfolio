@@ -66,6 +66,8 @@ export function HomePage() {
             title="Software Engineer Intern"
             description="Implemented Google Sign In for authentication and authorization, enabling secure user access."
             technologies={["JavaScript", "CSS", "HTML", "Netlify", "AirTable"]}
+            companyName="jobboardai"
+            companyUrl="https://jobboardai.io"
           />
         </div>
       </div>
