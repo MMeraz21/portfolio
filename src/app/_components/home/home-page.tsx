@@ -3,18 +3,19 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
 import { SiteNav } from "../layout/site-nav";
 import { ExperienceCard } from "../common/experience-card";
+import { ProjectCard } from "../common/project-card";
 
 export function HomePage() {
   return (
-    <div className="flex h-[calc(100vh-72px)] flex-row items-start bg-[#fbfbf3]">
+    <div className="flex h-[calc(100vh-72px)] flex-row items-start bg-[#fff9ea]">
       {/* Left Column */}
       <div className="flex h-full flex-1 flex-col pt-32 pl-32">
         <div>
           <h1 className="mb-4 text-6xl font-medium">Manuel Meraz</h1>
           <p className="mb-6 text-3xl">Full Stack Engineer</p>
-          <p className="max-w-[600px] text-xl text-gray-500">
+          {/* <p className="max-w-[600px] text-xl text-gray-500">
             I build accessible, pixel-perfect digital experiences for the web.
-          </p>
+          </p> */}
         </div>
         <div className="my-auto">
           <SiteNav />
@@ -69,6 +70,22 @@ export function HomePage() {
             technologies={["JavaScript", "CSS", "HTML", "Netlify", "AirTable"]}
             companyName="jobboardai"
             companyUrl="https://jobboardai.io"
+          />
+          <ProjectCard
+            title="Echo"
+            description={`A video chat app that auto-transcribes conversations and translates them in real-time, 
+            enabling communication across language barriers.`}
+            technologies={[
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Shadcn/ui",
+              "Azure",
+            ]}
+            demoUrl="https://echo-rho-two.vercel.app/"
+            githubUrl="https://github.com/MMeraz21/Echo"
+            year="2025"
           />
         </div>
       </div>
