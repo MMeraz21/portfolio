@@ -64,7 +64,8 @@ export function HomePage() {
           <ExperienceCard
             timePeriod="June-August 2025"
             title="Software Engineer Intern"
-            description="Implemented Google Sign In for authentication and authorization, enabling secure user access."
+            description={`Implemented Google Sign In authentication and built a user dashboard for managing job applications. 
+             Developed serverless backend functionality for job saving, retrieval, and session management.`}
             technologies={["JavaScript", "CSS", "HTML", "Netlify", "AirTable"]}
             companyName="jobboardai"
             companyUrl="https://jobboardai.io"
