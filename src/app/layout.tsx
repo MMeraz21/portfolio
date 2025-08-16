@@ -9,7 +9,11 @@ import { TRPCReactProvider } from "~/trpc/react";
 export const metadata: Metadata = {
   title: "Manuel Meraz",
   description: "Manuel Meraz's personal website",
-  icons: [{ rel: "icon", url: "/favicon.svg" }],
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "apple-touch-icon", url: "/favicon.svg" },
+    { rel: "icon", url: "/favicon.ico", sizes: "any" }, // fallback
+  ],
 };
 
 const inter = Inter({
@@ -24,11 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable}`}>
       <body className="bg-[#f4efdc] font-sans">
         {" "}
-        {/* Set the background color here */}
-        <TRPCReactProvider>
-          {/* <SiteNav /> */}
-          {children}
-        </TRPCReactProvider>
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
   );
