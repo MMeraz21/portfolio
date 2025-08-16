@@ -11,10 +11,15 @@ export function HomePage() {
     const scrollContainer = document.getElementById("scrollContainer");
 
     const handleWheel = (e: WheelEvent) => {
-      if (scrollContainer) {
+      // Check if we're on desktop (lg breakpoint is 1024px)
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop && scrollContainer) {
+        // Desktop: scroll the container
         e.preventDefault();
         scrollContainer.scrollTop += e.deltaY;
       }
+      // Mobile: let the default scroll behavior work (don't prevent default)
     };
 
     // Add wheel event listener to the entire document
@@ -26,17 +31,19 @@ export function HomePage() {
   }, []);
 
   return (
-    <div className="flex h-screen min-h-screen flex-row items-start bg-[#f4efdc]">
+    <div className="flex h-screen min-h-screen flex-col items-start bg-[#f4efdc] lg:flex-row">
       {/* Left Column */}
-      <div className="flex h-full flex-1 flex-col pt-32 pl-32">
+      <div className="flex h-auto flex-1 flex-col pt-16 pl-8 lg:h-full lg:pt-32 lg:pl-32">
         <div>
-          <h1 className="mb-4 text-6xl font-medium">Manuel Meraz</h1>
-          <p className="mb-6 text-3xl">Full Stack Engineer</p>
+          <h1 className="mb-4 text-4xl font-medium lg:text-6xl">
+            Manuel Meraz
+          </h1>
+          <p className="mb-6 text-2xl lg:text-3xl">Full Stack Engineer</p>
         </div>
-        <div className="my-auto">
+        <div className="my-4 hidden lg:my-auto lg:block">
           <SiteNav />
         </div>
-        <div className="mb-16 flex gap-6">
+        <div className="mb-8 flex gap-6 lg:mb-16">
           <a
             href="https://github.com/MMeraz21"
             target="_blank"
@@ -66,7 +73,7 @@ export function HomePage() {
 
       {/* Right Column */}
       <div
-        className="h-full flex-1 overflow-y-auto p-8 pt-32"
+        className="h-auto flex-1 overflow-y-visible p-8 pt-8 lg:h-full lg:overflow-y-auto lg:pt-32"
         id="scrollContainer"
       >
         {/* About Section */}

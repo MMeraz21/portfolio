@@ -22,7 +22,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="bg-[#fbfbf3] font-sans">
+      <body className="bg-[#f4efdc] font-sans">
         {" "}
         {/* Set the background color here */}
         <TRPCReactProvider>
