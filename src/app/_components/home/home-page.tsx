@@ -77,19 +77,23 @@ export function HomePage() {
         id="scrollContainer"
       >
         {/* About Section */}
-        <div id="about" className="max-w-[600px] text-xl text-black">
-          Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
-          enjoys building cool stuff for the web and mobile. I like working
-          across the stack, but I especially enjoy making things that feel fast,
-          clean, and intuitive. Whether it&apos;s a weekend side project or
-          something bigger, I love turning ideas into real apps. Outside of
-          coding, you&apos;ll usually find me digging through online
-          marketplaces for deals on clothes, playing basketball, gaming, or
-          hanging out with my dog.
+        <div id="about">
+          <h2 className="mb-6 text-2xl font-medium lg:hidden">About</h2>
+          <div className="max-w-[600px] text-xl text-black">
+            Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
+            enjoys building cool stuff for the web and mobile. I like working
+            across the stack, but I especially enjoy making things that feel
+            fast, clean, and intuitive. Whether it&apos;s a weekend side project
+            or something bigger, I love turning ideas into real apps. Outside of
+            coding, you&apos;ll usually find me digging through online
+            marketplaces for deals on clothes, playing basketball, gaming, or
+            hanging out with my dog.
+          </div>
         </div>
 
         {/* Experience Section */}
         <div id="experience" className="mt-16 max-w-[600px]">
+          <h2 className="mb-6 text-2xl font-medium lg:hidden">Experience</h2>
           <ExperienceCard
             timePeriod="June-August 2025"
             title="Software Engineer Intern"
@@ -101,7 +105,8 @@ export function HomePage() {
           />
 
           {/* Projects Section */}
-          <div id="projects">
+          <div id="projects" className="mt-16">
+            <h2 className="mb-6 text-2xl font-medium lg:hidden">Projects</h2>
             <ProjectCard
               title="Echo"
               description={`A video chat app that auto-transcribes conversations and translates them in real-time, 
