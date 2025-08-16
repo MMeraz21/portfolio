@@ -49,9 +49,12 @@ export function HomePage() {
       </div>
 
       {/* Right Column */}
-      <div className="h-full flex-1 overflow-y-auto p-8 pt-32">
-        {/* Right column content */}
-        <div className="max-w-[600px] text-xl text-gray-500">
+      <div
+        className="h-full flex-1 overflow-y-auto p-8 pt-32"
+        id="scrollContainer"
+      >
+        {/* About Section */}
+        <div id="about" className="max-w-[600px] text-xl text-gray-500">
           Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
           enjoys building cool stuff for the web and mobile. I like working
           across the stack, but I especially enjoy making things that feel fast,
@@ -61,7 +64,9 @@ export function HomePage() {
           marketplaces for deals on clothes, playing basketball, gaming, or
           hanging out with my dog.
         </div>
-        <div className="mt-16 max-w-[600px]">
+
+        {/* Experience Section */}
+        <div id="experience" className="mt-16 max-w-[600px]">
           <ExperienceCard
             timePeriod="June-August 2025"
             title="Software Engineer Intern"
@@ -71,43 +76,47 @@ export function HomePage() {
             companyName="jobboardai"
             companyUrl="https://jobboardai.io"
           />
-          <ProjectCard
-            title="Echo"
-            description={`A video chat app that auto-transcribes conversations and translates them in real-time, 
+
+          {/* Projects Section */}
+          <div id="projects">
+            <ProjectCard
+              title="Echo"
+              description={`A video chat app that auto-transcribes conversations and translates them in real-time, 
             enabling communication across language barriers.`}
-            technologies={[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Tailwind CSS",
-              "Shadcn/ui",
-              "Azure",
-            ]}
-            demoUrl="https://echo-rho-two.vercel.app/"
-            githubUrl="https://github.com/MMeraz21/Echo"
-            year="2025"
-          />
-          <ProjectCard
-            title="Spear"
-            description={`A TikTok-inspired mobile app for sharing and discovering poetry. Features Google Sign In authentication 
+              technologies={[
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Shadcn/ui",
+                "Azure",
+              ]}
+              demoUrl="https://echo-rho-two.vercel.app/"
+              githubUrl="https://github.com/MMeraz21/Echo"
+              year="2025"
+            />
+            <ProjectCard
+              title="Spear"
+              description={`A TikTok-inspired mobile app for sharing and discovering poetry. Features Google Sign In authentication 
                 and a feed-based interface for browsing poems instead of videos.`}
-            technologies={[
-              "React Native",
-              "TypeScript",
-              "Expo",
-              "Spring Boot",
-              "Java",
-            ]}
-            githubUrl="https://github.com/MMeraz21/Spear"
-            year="2024"
-          />
-          <ProjectCard
-            title="HealthBuddy"
-            description={`A mobile app that allows users to track their health metrics and receive personalized recommendations for improving their health.`}
-            technologies={["Swift", "SwiftUI"]}
-            githubUrl="https://github.com/MMeraz21/HealthBuddy"
-            year="2024"
-          />
+              technologies={[
+                "React Native",
+                "TypeScript",
+                "Expo",
+                "Spring Boot",
+                "Java",
+              ]}
+              githubUrl="https://github.com/MMeraz21/Spear"
+              year="2024"
+            />
+            <ProjectCard
+              title="HealthBuddy"
+              description={`A mobile app that allows users to track their health metrics and receive personalized recommendations for improving their health.`}
+              technologies={["Swift", "SwiftUI"]}
+              githubUrl="https://github.com/MMeraz21/HealthBuddy"
+              year="2024"
+            />
+          </div>
         </div>
       </div>
     </div>

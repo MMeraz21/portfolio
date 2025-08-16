@@ -18,7 +18,7 @@ export function ProjectCard({
   year,
 }: ProjectCardProps) {
   return (
-    <div className="flex gap-8 py-8">
+    <div className="-mx-4 flex gap-8 rounded-lg border border-transparent px-4 py-8 transition-all duration-200 hover:translate-y-[-1px] hover:border-gray-200">
       <div className="w-1/4">
         <p className="text-sm font-medium tracking-wider text-gray-500 uppercase">
           {year ?? "Personal Project"}

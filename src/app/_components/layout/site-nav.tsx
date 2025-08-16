@@ -6,12 +6,31 @@ import { useState } from "react";
 export function SiteNav() {
   const [activeItem, setActiveItem] = useState("About");
 
+  const scrollToSection = (sectionId: string, itemName: string) => {
+    setActiveItem(itemName);
+    const container = document.getElementById("scrollContainer");
+    const section = document.getElementById(sectionId);
+
+    if (container && section) {
+      const containerRect = container.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
+      const scrollTop = container.scrollTop;
+      const targetScrollTop =
+        scrollTop + sectionRect.top - containerRect.top - 32; // 32px offset
+
+      container.scrollTo({
+        top: targetScrollTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav>
       <ul className="flex flex-col -space-y-1">
         <li>
           <span
-            onClick={() => setActiveItem("About")}
+            onClick={() => scrollToSection("about", "About")}
             className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "About" ? "text-black" : "text-[#999999]"}`}
           >
             About
@@ -19,7 +38,7 @@ export function SiteNav() {
         </li>
         <li>
           <span
-            onClick={() => setActiveItem("Experience")}
+            onClick={() => scrollToSection("experience", "Experience")}
             className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "Experience" ? "text-black" : "text-[#999999]"}`}
           >
             Experience
@@ -27,7 +46,7 @@ export function SiteNav() {
         </li>
         <li>
           <span
-            onClick={() => setActiveItem("Projects")}
+            onClick={() => scrollToSection("projects", "Projects")}
             className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "Projects" ? "text-black" : "text-[#999999]"}`}
           >
             Projects
