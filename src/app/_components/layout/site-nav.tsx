@@ -35,14 +35,6 @@ export function SiteNav() {
         </li>
         <li>
           <span
-            onClick={() => setActiveItem("Education")}
-            className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "Education" ? "text-black" : "text-[#999999]"}`}
-          >
-            Education
-          </span>
-        </li>
-        <li>
-          <span
             onClick={() => setActiveItem("More")}
             className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "More" ? "text-black" : "text-[#999999]"}`}
           >

@@ -7,7 +7,7 @@ import { ProjectCard } from "../common/project-card";
 
 export function HomePage() {
   return (
-    <div className="flex h-[calc(100vh-72px)] flex-row items-start bg-[#fff9ea]">
+    <div className="flex h-screen min-h-screen flex-row items-start bg-[#fff9ea]">
       {/* Left Column */}
       <div className="flex h-full flex-1 flex-col pt-32 pl-32">
         <div>
@@ -49,7 +49,7 @@ export function HomePage() {
       </div>
 
       {/* Right Column */}
-      <div className="flex-1 p-8 pt-32">
+      <div className="h-full flex-1 overflow-y-auto p-8 pt-32">
         {/* Right column content */}
         <div className="max-w-[600px] text-xl text-gray-500">
           Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
@@ -90,7 +90,7 @@ export function HomePage() {
           <ProjectCard
             title="Spear"
             description={`A TikTok-inspired mobile app for sharing and discovering poetry. Features Google Sign In authentication 
-                and a feed-based interface for browsing poems.`}
+                and a feed-based interface for browsing poems instead of videos.`}
             technologies={[
               "React Native",
               "TypeScript",
@@ -99,6 +99,13 @@ export function HomePage() {
               "Java",
             ]}
             githubUrl="https://github.com/MMeraz21/Spear"
+            year="2024"
+          />
+          <ProjectCard
+            title="HealthBuddy"
+            description={`A mobile app that allows users to track their health metrics and receive personalized recommendations for improving their health.`}
+            technologies={["Swift", "SwiftUI"]}
+            githubUrl="https://github.com/MMeraz21/HealthBuddy"
             year="2024"
           />
         </div>

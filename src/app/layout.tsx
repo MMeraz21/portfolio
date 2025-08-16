@@ -22,7 +22,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
-      <body className="bg-[#fbfbf3]"> {/* Set the background color here */}
+      <body className="bg-[#fbfbf3]">
         <TRPCReactProvider>
           {/* <SiteNav /> */}
           {children}
