@@ -7,7 +7,7 @@ import { ProjectCard } from "../common/project-card";
 
 export function HomePage() {
   return (
-    <div className="flex h-screen min-h-screen flex-row items-start bg-[#fff9ea]">
+    <div className="flex h-screen min-h-screen flex-row items-start bg-[#f4efdc]">
       {/* Left Column */}
       <div className="flex h-full flex-1 flex-col pt-32 pl-32">
         <div>
@@ -25,7 +25,7 @@ export function HomePage() {
             href="https://github.com/MMeraz21"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900"
+            className="text-gray-700 hover:text-[#2a4433]"
           >
             <Github size={24} />
           </a>
@@ -33,7 +33,7 @@ export function HomePage() {
             href="https://www.linkedin.com/in/manuel-meraz-386a27204/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900"
+            className="text-gray-700 hover:text-[#2a4433]"
           >
             <Linkedin size={24} />
           </a>
@@ -41,7 +41,7 @@ export function HomePage() {
             href="https://www.instagram.com/mmerazzzz21/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-900"
+            className="text-gray-700 hover:text-[#2a4433]"
           >
             <Instagram size={24} />
           </a>
@@ -54,7 +54,7 @@ export function HomePage() {
         id="scrollContainer"
       >
         {/* About Section */}
-        <div id="about" className="max-w-[600px] text-xl text-gray-500">
+        <div id="about" className="max-w-[600px] text-xl text-black">
           Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
           enjoys building cool stuff for the web and mobile. I like working
           across the stack, but I especially enjoy making things that feel fast,

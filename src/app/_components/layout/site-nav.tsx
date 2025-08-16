@@ -31,7 +31,7 @@ export function SiteNav() {
         <li>
           <span
             onClick={() => scrollToSection("about", "About")}
-            className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "About" ? "text-black" : "text-[#999999]"}`}
+            className={`cursor-pointer text-lg transition-colors duration-300 hover:text-black ${activeItem === "About" ? "text-black" : "text-[#999999]"}`}
           >
             About
           </span>
@@ -39,7 +39,7 @@ export function SiteNav() {
         <li>
           <span
             onClick={() => scrollToSection("experience", "Experience")}
-            className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "Experience" ? "text-black" : "text-[#999999]"}`}
+            className={`cursor-pointer text-lg transition-colors duration-300 hover:text-black ${activeItem === "Experience" ? "text-black" : "text-[#999999]"}`}
           >
             Experience
           </span>
@@ -47,7 +47,7 @@ export function SiteNav() {
         <li>
           <span
             onClick={() => scrollToSection("projects", "Projects")}
-            className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "Projects" ? "text-black" : "text-[#999999]"}`}
+            className={`cursor-pointer text-lg transition-colors duration-300 hover:text-black ${activeItem === "Projects" ? "text-black" : "text-[#999999]"}`}
           >
             Projects
           </span>
@@ -55,7 +55,7 @@ export function SiteNav() {
         <li>
           <span
             onClick={() => setActiveItem("More")}
-            className={`cursor-pointer text-lg transition-colors duration-200 ${activeItem === "More" ? "text-black" : "text-[#999999]"}`}
+            className={`cursor-pointer text-lg transition-colors duration-300 hover:text-black ${activeItem === "More" ? "text-black" : "text-[#999999]"}`}
           >
             More
           </span>
