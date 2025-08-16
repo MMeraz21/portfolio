@@ -4,8 +4,27 @@ import { Github, Linkedin, Instagram } from "lucide-react";
 import { SiteNav } from "../layout/site-nav";
 import { ExperienceCard } from "../common/experience-card";
 import { ProjectCard } from "../common/project-card";
+import { useEffect } from "react";
 
 export function HomePage() {
+  useEffect(() => {
+    const scrollContainer = document.getElementById("scrollContainer");
+
+    const handleWheel = (e: WheelEvent) => {
+      if (scrollContainer) {
+        e.preventDefault();
+        scrollContainer.scrollTop += e.deltaY;
+      }
+    };
+
+    // Add wheel event listener to the entire document
+    document.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
     <div className="flex h-screen min-h-screen flex-row items-start bg-[#f4efdc]">
       {/* Left Column */}
@@ -13,9 +32,6 @@ export function HomePage() {
         <div>
           <h1 className="mb-4 text-6xl font-medium">Manuel Meraz</h1>
           <p className="mb-6 text-3xl">Full Stack Engineer</p>
-          {/* <p className="max-w-[600px] text-xl text-gray-500">
-            I build accessible, pixel-perfect digital experiences for the web.
-          </p> */}
         </div>
         <div className="my-auto">
           <SiteNav />
