@@ -33,7 +33,7 @@ export function HomePage() {
   return (
     <div className="flex h-screen min-h-screen flex-col items-start bg-[#f4efdc] lg:flex-row">
       {/* Left Column */}
-      <div className="flex h-auto flex-1 flex-col pt-16 pl-8 lg:h-full lg:pt-32 lg:pl-32">
+      <div className="flex h-auto flex-1 flex-col pt-16 pl-8 lg:h-full lg:pt-32 lg:pl-64">
         <div>
           <h1 className="mb-4 text-4xl font-medium lg:text-6xl">
             Manuel Meraz
@@ -73,13 +73,13 @@ export function HomePage() {
 
       {/* Right Column */}
       <div
-        className="h-auto flex-1 overflow-y-visible p-8 pt-8 lg:h-full lg:overflow-y-auto lg:pt-32"
+        className="h-auto flex-1 overflow-y-visible p-8 pt-8 lg:h-full lg:overflow-y-auto lg:pt-32 lg:pr-64"
         id="scrollContainer"
       >
         {/* About Section */}
         <div id="about">
           <h2 className="mb-6 text-2xl font-medium lg:hidden">About</h2>
-          <div className="max-w-[600px] text-xl text-black">
+          <div className="text-xl text-black">
             Hey! I&apos;m Manuel, a recent CS grad from DePaul University who
             enjoys building cool stuff for the web and mobile. I like working
             across the stack, but I especially enjoy making things that feel
@@ -92,7 +92,7 @@ export function HomePage() {
         </div>
 
         {/* Experience Section */}
-        <div id="experience" className="mt-16 max-w-[600px]">
+        <div id="experience" className="mt-16">
           <h2 className="mb-6 text-2xl font-medium lg:hidden">Experience</h2>
           <ExperienceCard
             timePeriod="June-August 2025"
