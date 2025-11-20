@@ -1,10 +1,55 @@
 "use client";
 
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function SiteNav() {
   const [activeItem, setActiveItem] = useState("About");
+
+  useEffect(() => {
+    const container = document.getElementById("scrollContainer");
+    if (!container) return;
+
+    const sections = [
+      { id: "about", name: "About" },
+      { id: "experience", name: "Experience" },
+      { id: "projects", name: "Projects" },
+    ];
+
+    const handleScroll = () => {
+      const containerRect = container.getBoundingClientRect();
+      let currentSection = sections[0];
+
+      // Loop through sections and find the last one that's within 200px of the top
+      // This way, as you scroll down, each section becomes active as it approaches the top
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const relativeTop = rect.top - containerRect.top;
+
+          // If section is within 200px of the top (or already past it), make it the current section
+          if (relativeTop <= 200) {
+            currentSection = section;
+          }
+        }
+      }
+
+      if (currentSection) {
+        setActiveItem(currentSection.name);
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
+    // Add scroll listener
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToSection = (sectionId: string, itemName: string) => {
     setActiveItem(itemName);
