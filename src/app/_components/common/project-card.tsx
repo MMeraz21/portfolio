@@ -1,4 +1,5 @@
 import { Badge } from "./badge";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -39,7 +40,7 @@ export function ProjectCard({
                       className="inline-flex items-center gap-1 text-sm transition-colors hover:text-gray-700"
                     >
                       Demo
-                      <span className="text-xs">↗</span>
+                      <ArrowUpRight className="h-3 w-3" />
                     </a>
                   )}
                   {demoUrl && githubUrl && " · "}
@@ -51,7 +52,7 @@ export function ProjectCard({
                       className="inline-flex items-center gap-1 text-sm transition-colors hover:text-gray-700"
                     >
                       GitHub
-                      <span className="text-xs">↗</span>
+                      <ArrowUpRight className="h-3 w-3" />
                     </a>
                   )}
                 </span>

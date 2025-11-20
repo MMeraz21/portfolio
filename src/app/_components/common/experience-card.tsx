@@ -1,4 +1,5 @@
 import { Badge } from "./badge";
+import { ArrowUpRight } from "lucide-react";
 
 interface ExperienceCardProps {
   timePeriod: string;
@@ -40,7 +41,7 @@ export function ExperienceCard({
                       className="inline-flex items-center gap-1 transition-colors hover:text-gray-700"
                     >
                       {companyName}
-                      <span className="text-xs">↗</span>
+                      <ArrowUpRight className="h-3 w-3" />
                     </a>
                   ) : (
                     <span>{companyName}</span>
