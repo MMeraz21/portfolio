@@ -18,9 +18,10 @@ export function SiteNav() {
 
     const handleScroll = () => {
       const containerRect = container.getBoundingClientRect();
+      const viewportHeight = containerRect.height;
       let currentSection = sections[0];
 
-      // Loop through sections and find the last one that's within 200px of the top
+      // Loop through sections and find the last one that's within the top half of viewport
       // This way, as you scroll down, each section becomes active as it approaches the top
       for (const section of sections) {
         const element = document.getElementById(section.id);
@@ -28,8 +29,8 @@ export function SiteNav() {
           const rect = element.getBoundingClientRect();
           const relativeTop = rect.top - containerRect.top;
 
-          // If section is within 200px of the top (or already past it), make it the current section
-          if (relativeTop <= 200) {
+          // If section is within the top half of the viewport (or already past it), make it the current section
+          if (relativeTop <= viewportHeight * 0.4) {
             currentSection = section;
           }
         }
