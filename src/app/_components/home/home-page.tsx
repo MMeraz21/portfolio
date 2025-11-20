@@ -95,11 +95,17 @@ export function HomePage() {
         <div id="experience" className="mt-16">
           <h2 className="mb-6 text-2xl font-medium lg:hidden">Experience</h2>
           <ExperienceCard
-            timePeriod="June-August 2025"
+            timePeriod="June-October 2025"
             title="Software Engineer Intern"
-            description={`Implemented Google Sign In authentication and built a user dashboard for managing job applications. 
-             Developed serverless backend functionality for job saving, retrieval, and session management.`}
-            technologies={["JavaScript", "CSS", "HTML", "Netlify", "AirTable"]}
+            description={`Migrated the codebase to Next.js, TypeScript, and Tailwind CSS. Implemented Google Sign In authentication and built a user dashboard for managing job applications with serverless backend functionality.`}
+            technologies={[
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "JavaScript",
+              "Netlify",
+              "AirTable",
+            ]}
             companyName="jobboardai"
             companyUrl="https://jobboardai.io"
           />
